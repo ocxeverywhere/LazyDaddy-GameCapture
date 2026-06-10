@@ -173,6 +173,12 @@ h3 {
   color: #fff;
 }
 
+.button-link--light {
+  border-color: rgb(255 255 255 / 72%);
+  background: #fff;
+  color: var(--blue-dark);
+}
+
 .hero__icon {
   margin: 0;
   justify-self: center;
@@ -216,7 +222,8 @@ h3 {
 
 .section--features,
 .section--details,
-.section--privacy {
+.section--privacy,
+.section--download {
   background: var(--surface);
 }
 
@@ -344,6 +351,25 @@ dd {
   gap: 28px;
 }
 
+.download-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+  padding: clamp(24px, 5vw, 38px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-soft);
+}
+
+.download-panel code {
+  padding: 2px 5px;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--blue);
+  font-size: 0.92em;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -469,6 +495,10 @@ td {
   .step-list,
   .info-grid,
   .privacy-callout {
+    grid-template-columns: 1fr;
+  }
+
+  .download-panel {
     grid-template-columns: 1fr;
   }
 
