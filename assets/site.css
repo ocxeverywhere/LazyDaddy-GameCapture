@@ -30,6 +30,8 @@ body {
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Noto Sans KR", sans-serif;
   line-height: 1.6;
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 
 a {
@@ -82,6 +84,61 @@ img {
   text-underline-offset: 5px;
 }
 
+.topbar__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.language-switch__link {
+  padding: 7px 8px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.language-switch__link:hover,
+.language-switch__link:focus-visible {
+  background: var(--surface-soft);
+  color: var(--blue-dark);
+}
+
+.language-switch__link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.language-switch__link[aria-current="page"] {
+  background: var(--blue);
+  color: #fff;
+}
+
+.hero .language-switch {
+  border-color: rgb(255 255 255 / 44%);
+  color: rgb(255 255 255 / 82%);
+}
+
+.hero .language-switch__link:hover,
+.hero .language-switch__link:focus-visible,
+.hero .language-switch__link[aria-current="page"] {
+  background: #fff;
+  color: var(--blue-dark);
+}
+
 .hero__inner {
   width: min(1120px, calc(100% - 40px));
   margin-inline: auto;
@@ -103,13 +160,6 @@ img {
 
 .hero .eyebrow {
   color: var(--gold);
-}
-
-h1,
-h2,
-h3,
-p {
-  overflow-wrap: break-word;
 }
 
 h1,
@@ -529,11 +579,19 @@ td {
     width: min(100% - 28px, 1120px);
   }
 
+  .topbar {
+    flex-wrap: wrap;
+  }
+
   .brand span {
     max-width: 176px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .topbar__links {
+    flex-basis: 100%;
   }
 
   .nav-link {
