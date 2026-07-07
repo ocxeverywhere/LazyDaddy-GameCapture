@@ -229,6 +229,19 @@ h3 {
   color: var(--blue-dark);
 }
 
+.support-widget {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: rgb(255 255 255 / 90%);
+  font-weight: 800;
+}
+
+.support-widget span {
+  line-height: 1.25;
+}
+
 .hero__icon {
   margin: 0;
   justify-self: center;
@@ -272,8 +285,7 @@ h3 {
 
 .section--features,
 .section--details,
-.section--privacy,
-.section--download {
+.section--privacy {
   background: var(--surface);
 }
 
@@ -401,25 +413,6 @@ dd {
   gap: 28px;
 }
 
-.download-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 28px;
-  padding: clamp(24px, 5vw, 38px);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface-soft);
-}
-
-.download-panel code {
-  padding: 2px 5px;
-  border-radius: 6px;
-  background: #fff;
-  color: var(--blue);
-  font-size: 0.92em;
-}
-
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -545,10 +538,6 @@ td {
   .step-list,
   .info-grid,
   .privacy-callout {
-    grid-template-columns: 1fr;
-  }
-
-  .download-panel {
     grid-template-columns: 1fr;
   }
 
