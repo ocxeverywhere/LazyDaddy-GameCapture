@@ -242,6 +242,15 @@ h3 {
   line-height: 1.25;
 }
 
+.support-widget iframe,
+.support-widget a {
+  min-height: 44px;
+}
+
+.support-widget iframe {
+  height: 44px !important;
+}
+
 .hero__icon {
   margin: 0;
   justify-self: center;
